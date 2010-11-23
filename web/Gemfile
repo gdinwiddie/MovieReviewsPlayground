@@ -1,0 +1,6 @@
+source "http://rubygems.org"
+source :rubygems
+gem "rspec"
+gem "sinatra"
+gem "haml"
+

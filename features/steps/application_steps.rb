@@ -1,7 +1,7 @@
 When /^I visit the homepage$/ do
-  pending # express the regexp above with the code you wish you had
+  visit('/')
 end
 
 Then /^I see a list of movies$/ do
-  pending # express the regexp above with the code you wish you had
+  page.should have_xpath('//table')
 end
