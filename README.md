@@ -1,4 +1,6 @@
-# MoviewReview
+# MovieReview
+
+# Description
 
 This is a sample application for a Movie Review Website.
 
@@ -20,7 +22,7 @@ We expect it to evolve into something that can do the following:
  * Users can create a "My Top Movies"
  * etc.
 
-# Dependencies
+# Install
 
 Make sure you have installed:
 
@@ -57,3 +59,6 @@ ruby start_web.rb
 - -> /
 </code></pre>
 
+# Development
+
+The source is hosted at [GitHub](https://github.com/gdinwiddie/MovieReviewsPlayground)
