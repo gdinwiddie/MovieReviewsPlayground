@@ -42,3 +42,18 @@ and it should look like this:
 </code></pre>
     Your bundle is complete! Use `bundle show [gemname]` to see where a bundled gem is installed.
 
+# Running The Code
+
+Frankly, I (jon) could not get it to work probably as George had intended. Best I got was
+
+<pre><code>
+cd <project root>/web
+ruby start_web.rb
+== Sinatra/1.1.0 has taken the stage on 4567 for development with backup from WEBrick
+[2010-11-26 22:08:49] INFO  WEBrick 1.3.1
+[2010-11-26 22:08:49] INFO  ruby 1.8.7 (2009-06-12) [universal-darwin10.0]
+[2010-11-26 22:08:49] INFO  WEBrick::HTTPServer#start: pid=3357 port=4567
+[26/Nov/2010:22:09:01 EST] "GET / HTTP/1.1" 200 268
+- -> /
+</code></pre>
+
