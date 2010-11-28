@@ -37,7 +37,7 @@ Given /^I load (\d+) movie[s]? in the movie list$/ do |movie_count|
   (1..movie_count.to_i).each do |i|
     @movie = Movie.new( "#{i} Movie" )
   end
-  #TODO merthe these divergent data loads
+  #TODO merge these divergent data loads
 end
 
 When /^I visit the homepage$/ do
