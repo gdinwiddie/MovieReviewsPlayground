@@ -1,3 +1,15 @@
+class Movie
+  attr_accessor :title
+  
+  def initialize( title )
+    @title = title
+  end
+  
+  def to_s
+    @title
+  end
+end
+
 class TestData
   @@movies = {
     'gwtw' => 'Gone With The Wind',
@@ -17,6 +29,9 @@ Given /^I load (\d+) movie[s]? in the movie list$/ do |movie_count|
     key= keylist[index]    
     puts "#{index}, #{key}, #{TestData.movies[key]}"
     # needs to poke these into the database
+  end
+  (1..movie_count.to_i).each do |i|
+    @movie = Movie.new( "#{i} Movie" )
   end
 end
 
