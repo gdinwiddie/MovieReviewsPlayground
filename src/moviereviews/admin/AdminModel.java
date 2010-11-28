@@ -22,5 +22,4 @@ public class AdminModel {
 	public String[] getMovieList() {
 		return (String[]) movieList.toArray(new String[] {});
 	}
-
 }

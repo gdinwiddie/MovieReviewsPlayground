@@ -46,18 +46,39 @@ and it should look like this:
 
 # Running The Code
 
-Frankly, I (jon) could not get it to work probably as George had intended. Best I got was
+## Cucumber tests
+$cucumber -p wip
 
-<pre><code>
-cd <project root>/web
-ruby start_web.rb
-== Sinatra/1.1.0 has taken the stage on 4567 for development with backup from WEBrick
-[2010-11-26 22:08:49] INFO  WEBrick 1.3.1
-[2010-11-26 22:08:49] INFO  ruby 1.8.7 (2009-06-12) [universal-darwin10.0]
-[2010-11-26 22:08:49] INFO  WEBrick::HTTPServer#start: pid=3357 port=4567
-[26/Nov/2010:22:09:01 EST] "GET / HTTP/1.1" 200 268
-- -> /
-</code></pre>
+Failing Scenarios:
+cucumber -p wip features/movielist.feature:11 # Scenario: A list of one movie
+cucumber -p wip features/movielist.feature:17 # Scenario: A list of three movies
+
+2 scenarios (2 failed)
+6 steps (2 failed, 4 passed)
+0m0.708s
+
+The --wip switch was used, so the failures were expected. All is good.
+
+## rspec tests
+$ rspec specs
+..
+
+Finished in 0.02 seconds
+2 examples, 0 failures
+
+## Sinatra
+$ ./start_web.sh 
+~/dev.java/MovieReviews/MovieReviews/web ~/dev.java/MovieReviews/MovieReviews
+./lib/movie_review_site.rb:3:in `require': no such file to load -- features/steps/admin_helper (LoadError)
+	from ./lib/movie_review_site.rb:3
+	from ./lib/movie_review_site.rb:5:in `require'
+	from start_web.rb:5
+~/dev.java/MovieReviews/MovieReviews
+
+### Oops
+Part of the problem is that the webserver is started in ./web instead of the project root directory.
+Therefore, the 'require' statements need to be independent of the current working directory.
+
 
 # Development
 
