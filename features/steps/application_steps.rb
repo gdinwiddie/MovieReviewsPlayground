@@ -1,6 +1,22 @@
+class TestData
+  @@movies = {
+    'gwtw' => 'Gone With The Wind',
+    'lebo' => 'The Big Lebowski',
+    'mphg' => 'Monty Python and the Holy Grail',
+  }
+  
+  def TestData.movies
+    @@movies
+  end
+end
+
 Given /^I load (\d+) movie[s]? in the movie list$/ do |movie_count|
-  movie_count.each do |current_count|
-    puts current_count # needs to poke these into the database
+  count= movie_count.to_i
+  keylist= TestData.movies.keys
+  (0..count-1).each do |index|
+    key= keylist[index]    
+    puts "#{index}, #{key}, #{TestData.movies[key]}"
+    # needs to poke these into the database
   end
 end
 
