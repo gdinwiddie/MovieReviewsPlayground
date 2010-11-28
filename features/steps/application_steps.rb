@@ -1,6 +1,6 @@
 Given /^I load (\d+) movie[s]? in the movie list$/ do |movie_count|
   movie_count.each do |current_count|
-    puts current_count
+    puts current_count # needs to poke these into the database
   end
 end
 

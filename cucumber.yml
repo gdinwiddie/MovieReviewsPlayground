@@ -1,0 +1,2 @@
+working: --tags ~@WIP
+wip: --wip --tags @WIP
