@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require 'haml'
-require 'features/steps/admin_helper'
+cur_dir= File.expand_path(File.dirname(__FILE__))
+require cur_dir + '/../../features/steps/admin_helper'
 
 # Sinatra needs: require '../features/steps/admin_helper'
 

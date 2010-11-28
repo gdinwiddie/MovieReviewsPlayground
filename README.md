@@ -45,10 +45,9 @@ and it should look like this:
     Your bundle is complete! Use `bundle show [gemname]` to see where a bundled gem is installed.
     
 I don't know if this list is complete.  I haven't yet checked that out.  
-In case it helps, I'm using <code>jruby-1.5.3</code> under <code>rvm</code and 
+In case it helps, I'm using `jruby-1.5.3` under `rvm` and 
 the complete list of gems I have installed is
-<pre><code>
-bouncy-castle-java (1.5.0145.2)
+<pre><code>bouncy-castle-java (1.5.0145.2)
 builder (2.1.2)
 bundler (1.0.7)
 capybara (0.4.0)
@@ -116,16 +115,12 @@ Finished in 0.02 seconds
 <pre><code>
 $ ./start_web.sh 
 ~/dev.java/MovieReviews/MovieReviews/web ~/dev.java/MovieReviews/MovieReviews
-./lib/movie_review_site.rb:3:in `require': no such file to load -- features/steps/admin_helper (LoadError)
-	from ./lib/movie_review_site.rb:3
-	from ./lib/movie_review_site.rb:5:in `require'
-	from start_web.rb:5
-~/dev.java/MovieReviews/MovieReviews
+== Sinatra/1.1.0 has taken the stage on 4567 for development with backup from WEBrick
+[2010-11-28 18:39:19] INFO  WEBrick 1.3.1
+[2010-11-28 18:39:19] INFO  ruby 1.8.7 (2010-09-28) [java]
+[2010-11-28 18:39:19] INFO  WEBrick::HTTPServer#start: pid=44609 port=4567
 </code></pre>
-
-### Oops
-Part of the problem is that the webserver is started in ./web instead of the project root directory.
-Therefore, the 'require' statements need to be independent of the current working directory.
+and you can hit `http://localhost:4567/`
 
 
 # Development
