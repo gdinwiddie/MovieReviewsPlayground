@@ -1,5 +1,7 @@
 Given /^I load (\d+) movie[s]? in the movie list$/ do |movie_count|
-  pending # express the regexp above with the code you wish you had
+  movie_count.each do |current_count|
+    puts current_count
+  end
 end
 
 When /^I visit the homepage$/ do
@@ -11,5 +13,5 @@ Then /^I see a list of movies$/ do
 end
 
 Then /^I see a list with (\d+) movie[s]?$/ do |movie_count|
-  pending # express the regexp above with the code you wish you had
+  page.all(:xpath, '//table/tr').length.should == movie_count
 end
