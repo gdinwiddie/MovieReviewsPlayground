@@ -16,4 +16,8 @@ class AdminHelper
   def movie_list
     @javaModel.getMovieList
   end
+  
+  def empty_db
+    @javaModel.emptyDb
+  end
 end

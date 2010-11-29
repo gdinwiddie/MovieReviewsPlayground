@@ -12,9 +12,10 @@ $CLASSPATH << '../bin'
 class MovieReviewSite < Sinatra::Base
   set :app_file, __FILE__
   set :inline_templates, true
-  $model = AdminHelper.new
 
   get '/' do
+    @model = AdminHelper.new
+    #@model.add_movie("dummy movie")
     haml :index
   end
 end
@@ -26,7 +27,9 @@ __END__
   %head
     %title A movie review application
   %body
-    %h1 Hello, world!
+    %h1 Review these movies:
     %table
-    - AdminHelper.new.movie_list.each do |movie|
-      %tr movie
+      - @model.movie_list.each do |movie|
+        %tr
+          %td #{movie}
+    %p #{@model.get_movie_count} movies

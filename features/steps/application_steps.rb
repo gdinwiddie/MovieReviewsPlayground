@@ -24,6 +24,7 @@ end
 
 Before do
   @admin_helper = AdminHelper.new
+  @admin_helper.empty_db
 end
     
 Given /^I load (\d+) movie[s]? in the movie list$/ do |movie_count|

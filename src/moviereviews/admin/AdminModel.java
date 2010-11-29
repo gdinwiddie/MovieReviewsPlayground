@@ -5,7 +5,7 @@ import java.util.List;
 
 public class AdminModel {
 
-	private List<String> movieList = new ArrayList<String>();
+	private static List<String> movieList = new ArrayList<String>();
 
 	public void addMovie(String title) {
 		movieList.add(title);
