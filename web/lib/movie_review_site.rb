@@ -3,11 +3,7 @@ require 'haml'
 cur_dir= File.expand_path(File.dirname(__FILE__))
 require cur_dir + '/../../features/steps/admin_helper'
 
-# Sinatra needs: require '../features/steps/admin_helper'
-
-#TODO set this some way that Cucumber & Sinatra don't need separate settings
-$CLASSPATH << 'bin'
-$CLASSPATH << '../bin'
+$CLASSPATH << cur_dir + '/../../bin'
 
 class MovieReviewSite < Sinatra::Base
   set :app_file, __FILE__
