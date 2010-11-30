@@ -1,2 +1,4 @@
+default: --jars lib --require features --require javasteps --require bin
+
 working: --tags ~@WIP
 wip: --wip --tags @WIP
